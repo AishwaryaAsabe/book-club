@@ -1,9 +1,9 @@
 // app/api/books/search/route.js
 
 import { NextResponse } from 'next/server';
-import { connectDB } from '@/app/lib/connectDB';
-import Book from '@/app/models/Book';
-import { authMiddleware } from '@/app/lib/authMiddleware';
+import { connectDB } from '../../../lib/connectDB';
+import Book from '../../../models/Book';
+import { authMiddleware } from '../../../lib/authMiddleware';
 
 export async function GET(req) {
   await connectDB();

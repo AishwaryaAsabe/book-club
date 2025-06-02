@@ -1,8 +1,8 @@
 // app/api/clubs/[clubId]/delete/route.js
 import { NextResponse } from 'next/server';
-import { connectDB } from '@/app/lib/connectDB';
-import Club from '@/app/models/Club';
-import { authMiddleware } from '@/app/lib/authMiddleware';
+import { connectDB } from '../../../../lib/connectDB';
+import Club from '../../../../models/Club';
+import { authMiddleware } from '../../../../lib/authMiddleware';
 
 export async function DELETE(req, { params }) {
   await connectDB();
