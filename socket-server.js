@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { startWeekendCalls } from './app/cron/route.js';
+import startWeekendCalls from './cron/startWeekendCalls.js'
 import cron from 'node-cron';
 
 // Load environment variables
