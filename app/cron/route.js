@@ -3,7 +3,8 @@ import Call from '../models/Call.js';
 import Club from '../models/Club.js';
 import { io } from '../../socket-server.js';
 
-export async function startWeekendCalls() {
+export async function GET() {
+  await startWeekendCalls();
   const now = new Date();
   const day = now.getDay(); // 0 = Sunday, 6 = Saturday
   const hour = now.getHours();
