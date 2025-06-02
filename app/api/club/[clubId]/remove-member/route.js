@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import Club from '@/app/models/Club';
-import { connectDB } from '@/app/lib/connectDB';
-import { authMiddleware } from '@/app/lib/authMiddleware';
+import Club from '../../../../models/Club';
+import { connectDB } from '../../../../lib/connectDB';
+import { authMiddleware } from '../../../../lib/authMiddleware';
 
 export async function POST(req, { params }) {
   await connectDB();
