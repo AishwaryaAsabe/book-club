@@ -1,7 +1,7 @@
 // app/api/books/[clubId]/all/route.js
 import { NextResponse } from 'next/server';
-import { connectDB } from '@/app/lib/connectDB';
-import Book from '@/app/models/Book';
+import { connectDB } from '../../../../lib/connectDB';
+import Book from '../../../../models/Book';
 
 export async function GET(req, { params }) {
   await connectDB();
