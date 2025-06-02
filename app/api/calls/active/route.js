@@ -1,4 +1,4 @@
-import Call from "@/app/models/Call";
+import Call from "../../../models/Call";
 
 export async function GET(req) {
   try {

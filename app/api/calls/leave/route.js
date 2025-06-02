@@ -1,5 +1,5 @@
-import Call from '@/app/models/Call';
-import { authMiddleware } from '@/app/lib/authMiddleware';
+import Call from '../../../models/Call';
+import { authMiddleware } from '../../../lib/authMiddleware';
 
 export async function POST(req) {
   try {

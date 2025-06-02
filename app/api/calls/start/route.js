@@ -1,6 +1,6 @@
-import Call from '@/app/models/Call';
-import { authMiddleware } from '@/app/lib/authMiddleware';
-import Club from '@/app/models/Club';
+import Call from '../../../models/Call';
+import { authMiddleware } from '../../../lib/authMiddleware';
+import Club from '../../../models/Club';
 
 export async function POST(req) {
   try {
