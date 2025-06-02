@@ -1,0 +1,212 @@
+
+/* Register Page Styles */
+.register-container {
+  @apply min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50;
+}
+
+.register-wrapper {
+  @apply min-h-screen grid lg:grid-cols-2 m-2 p-2 rounded-2xl shadow-2xl bg-white;
+}
+
+/* Form Section */
+.register-form-section {
+  @apply flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.register-form-container {
+  @apply max-w-md w-full mx-auto space-y-6;
+}
+
+/* Header */
+.register-header {
+  @apply flex justify-center;
+}
+
+.register-logo {
+  @apply flex items-center space-x-2 text-2xl font-bold text-gray-900 hover:text-amber-600 transition-colors duration-200;
+}
+
+.register-logo-icon {
+  @apply h-8 w-8 text-amber-600;
+}
+
+.register-logo-text {
+  @apply text-gray-900;
+}
+
+/* Form */
+.register-form-wrapper {
+  @apply space-y-6;
+}
+
+.register-title {
+  @apply text-3xl font-bold text-center text-gray-900;
+}
+
+.register-subtitle {
+  @apply text-center text-gray-600;
+}
+
+.register-link {
+  @apply text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200;
+}
+
+.register-form {
+  @apply space-y-4;
+}
+
+/* Form Groups */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.input-wrapper {
+  @apply relative;
+}
+
+.input-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400;
+}
+
+.form-input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 bg-white text-gray-900 placeholder-gray-500;
+}
+
+.password-toggle {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.toggle-icon {
+  @apply h-5 w-5;
+}
+
+/* Terms Section */
+.terms-group {
+  @apply space-y-2;
+}
+
+.checkbox-wrapper {
+  @apply flex items-start space-x-3 cursor-pointer;
+}
+
+.checkbox-input {
+  @apply h-4 w-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500 mt-1 flex-shrink-0;
+}
+
+.checkbox-label {
+  @apply text-sm text-gray-700 leading-relaxed;
+}
+
+.terms-link {
+  @apply text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200;
+}
+
+/* Buttons */
+.register-button {
+  @apply w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 px-4 rounded-lg hover:from-amber-700 hover:to-orange-700 focus:ring-4 focus:ring-amber-200 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none;
+}
+
+/* Guest Section */
+.guest-section {
+  @apply space-y-4;
+}
+
+.divider {
+  @apply relative;
+}
+
+.divider::before {
+  @apply absolute inset-0 flex items-center;
+  content: '';
+}
+
+.divider::before {
+  @apply w-full border-t border-gray-300;
+}
+
+.divider-text {
+  @apply relative bg-white px-4 text-sm text-gray-500;
+}
+
+.guest-button {
+  @apply w-full border-2 border-amber-600 text-amber-600 py-3 px-4 rounded-lg hover:bg-amber-600 hover:text-white transition-all duration-200 font-semibold text-center block;
+}
+
+/* Image Section */
+.register-image-section {
+  @apply relative hidden lg:block;
+}
+
+.register-bg-image {
+  @apply w-full h-full object-cover;
+}
+
+.register-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end;
+}
+
+.register-image-content {
+  @apply p-12 text-white space-y-6;
+}
+
+.register-image-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.register-image-text {
+  @apply text-lg text-gray-200 leading-relaxed mb-6;
+}
+
+.register-benefits {
+  @apply space-y-3;
+}
+
+.benefit-item {
+  @apply flex items-center text-amber-200 font-medium;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-wrapper {
+    @apply grid-cols-1;
+  }
+  
+  .register-form-section {
+    @apply py-6;
+  }
+  
+  .register-form-container {
+    @apply space-y-4;
+  }
+  
+  .register-form {
+    @apply space-y-3;
+  }
+}
+
+/* Focus States */
+.form-input:focus {
+  @apply outline-none ring-2 ring-amber-500 border-transparent;
+}
+
+.checkbox-input:focus {
+  @apply outline-none ring-2 ring-amber-500;
+}
+
+/* Hover Effects */
+.form-input:hover {
+  @apply border-amber-300;
+}
+
+/* Validation States */
+.form-input:invalid {
+  @apply border-red-300 focus:ring-red-500 focus:border-transparent;
+}
+
+.form-input:valid {
+  @apply border-green-300;
+}

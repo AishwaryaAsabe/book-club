@@ -1,103 +1,160 @@
-import Image from "next/image";
+'use client'; // ✅ Required for client-side interactions like Link
 
-export default function Home() {
+import React from 'react';
+import Link from 'next/link'; // ✅ Updated: from react-router-dom → next/link
+import { BookOpen, Users, MessageCircle, Video, Star, ArrowRight } from 'lucide-react';
+import '../styles/landing.css'; // ✅ Your existing CSS is preserved
+
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="landing-container">
+      {/* Header */}
+      <header className="landing-header">
+        <div className="header-content">
+          <div className="logo-section">
+            <BookOpen className="logo-icon" />
+            <span className="logo-text">BookClub</span>
+          </div>
+          <nav className="nav-links">
+            <Link href="/login" className="nav-link">Login</Link> {/* ✅ Updated */}
+            <Link href="/register" className="nav-link-primary">Get Started</Link> {/* ✅ Updated */}
+          </nav>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              Discover, Discuss, and Dive Deep into
+              <span className="hero-accent"> Amazing Books</span>
+            </h1>
+            <p className="hero-description">
+              Join passionate readers, create meaningful discussions, and explore new worlds 
+              through literature. Connect with like-minded book lovers and turn reading 
+              into a shared adventure.
+            </p>
+            <div className="hero-buttons">
+              <Link href="/register" className="btn-primary">
+                Start Your Journey <ArrowRight className="btn-icon" />
+              </Link> {/* ✅ Updated */}
+              <Link href="/login" className="btn-secondary">
+                Browse as Guest
+              </Link> {/* ✅ Updated */}
+            </div>
+          </div>
+          <div className="hero-image">
+            <img 
+              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              alt="Stack of books with warm lighting"
+              className="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="features-container">
+          <h2 className="features-title">Why Choose Our Book Club?</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon-wrapper">
+                <Users className="feature-icon" />
+              </div>
+              <h3 className="feature-title">Connect with Readers</h3>
+              <p className="feature-description">
+                Join vibrant communities of book enthusiasts and make meaningful connections 
+                through shared literary experiences.
+              </p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon-wrapper">
+                <MessageCircle className="feature-icon" />
+              </div>
+              <h3 className="feature-title">Rich Discussions</h3>
+              <p className="feature-description">
+                Engage in thoughtful conversations, share insights, and discover new 
+                perspectives on your favorite books.
+              </p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon-wrapper">
+                <Video className="feature-icon" />
+              </div>
+              <h3 className="feature-title">Virtual Meetups</h3>
+              <p className="feature-description">
+                Participate in live video discussions, author talks, and interactive 
+                book club sessions from anywhere.
+              </p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon-wrapper">
+                <Star className="feature-icon" />
+              </div>
+              <h3 className="feature-title">Curated Recommendations</h3>
+              <p className="feature-description">
+                Discover your next great read through personalized recommendations 
+                and community-driven book selections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="stats-section">
+        <div className="stats-container">
+          <div className="stat-item">
+            <div className="stat-number">10K+</div>
+            <div className="stat-label">Active Readers</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">500+</div>
+            <div className="stat-label">Book Clubs</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">50K+</div>
+            <div className="stat-label">Books Discussed</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">98%</div>
+            <div className="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="cta-container">
+          <h2 className="cta-title">Ready to Start Your Reading Journey?</h2>
+          <p className="cta-description">
+            Join thousands of book lovers and transform the way you experience literature.
+          </p>
+          <Link href="/register" className="cta-button">
+            Join BookClub Today
+          </Link> {/* ✅ Updated */}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="landing-footer">
+        <div className="footer-content">
+          <div className="footer-logo">
+            <BookOpen className="footer-logo-icon" />
+            <span className="footer-logo-text">BookClub</span>
+          </div>
+          <div className="footer-text">
+            © 2024 BookClub. All rights reserved. Made with ❤️ for book lovers.
+          </div>
+        </div>
       </footer>
     </div>
   );
-}
+};
+
+export default HomePage;

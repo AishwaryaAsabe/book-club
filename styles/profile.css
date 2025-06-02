@@ -1,0 +1,160 @@
+
+.profile-container {
+  @apply min-h-screen bg-bookclub-white;
+}
+
+.profile-content {
+  @apply container mx-auto px-4 py-8;
+}
+
+.profile-wrapper {
+  @apply max-w-4xl mx-auto;
+}
+
+.profile-header {
+  @apply mb-8;
+}
+
+.profile-title {
+  @apply text-3xl font-bold text-bookclub-navy mb-2;
+}
+
+.profile-subtitle {
+  @apply text-bookclub-gray;
+}
+
+.profile-tabs {
+  @apply space-y-6
+   ;
+  
+
+}
+.profile-EachTab{
+  @apply hover:bg-bookclub-orange hover:text-black;
+}
+
+
+.profile-tabs-list {
+  @apply grid w-full grid-cols-4
+}
+
+.profile-card {
+  /* Uses default card styling */
+  @apply bg-bookclub-cream1;
+}
+
+.profile-card-header {
+  @apply flex items-center justify-between;
+}
+
+.profile-edit-btn {
+  /* Uses button variant styling */
+}
+
+.profile-content-area {
+  @apply space-y-6;
+}
+
+.profile-avatar-section {
+  @apply flex items-center space-x-6;
+}
+
+.profile-avatar-container {
+  @apply relative;
+}
+
+.profile-avatar {
+  @apply w-24 h-24 rounded-full overflow-hidden; /* remove background */
+}
+
+.profile-avatar-edit {
+  @apply absolute -bottom-2 -right-2 rounded-full;
+}
+
+.profile-user-info {
+  @apply space-y-2;
+}
+
+.profile-user-name {
+  @apply text-xl font-semibold text-bookclub-navy;
+}
+
+.profile-user-email {
+  @apply text-bookclub-gray;
+}
+
+.profile-user-stats {
+  @apply flex space-x-4 text-sm text-bookclub-gray;
+}
+
+.profile-form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.profile-form-field {
+  /* Uses default input styling */
+}
+
+.profile-bio-field {
+  @apply mt-1 w-full p-3 border border-gray-300 rounded-md disabled:bg-gray-50;
+}
+
+.profile-genres-section {
+  /* Uses default label styling */
+}
+
+.profile-genres-list {
+  @apply mt-2 flex flex-wrap gap-2;
+}
+
+.profile-genre-tag {
+  @apply px-3 py-1 bg-bookclub-orange bg-opacity-10 text-bookclub-orange rounded-full text-sm;
+}
+
+.profile-stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.profile-stat-card {
+  @apply p-6 text-center;
+}
+
+.profile-stat-icon {
+  @apply w-8 h-8 text-bookclub-orange mx-auto mb-2;
+}
+
+.profile-stat-number {
+  @apply text-2xl font-bold text-bookclub-navy;
+}
+
+.profile-stat-label {
+  @apply text-sm text-bookclub-gray;
+}
+
+.profile-empty-state {
+  @apply text-center py-8 text-bookclub-gray;
+}
+
+.profile-empty-icon {
+  @apply w-12 h-12 mx-auto mb-4 opacity-50;
+}
+
+.profile-settings-list {
+  @apply space-y-6;
+}
+
+.profile-setting-item {
+  @apply flex items-center justify-between;
+}
+
+.profile-setting-info h4 {
+  @apply font-medium;
+}
+
+.profile-setting-info p {
+  @apply text-sm text-bookclub-gray;
+}
+
+.profile-setting-btn {
+  /* Uses button variant styling */
+}

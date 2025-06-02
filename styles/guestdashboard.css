@@ -1,0 +1,326 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .guest-dashboard {
+    @apply px-4 py-8 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .header-section {
+    @apply flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-12 pb-8 border-b border-gray-200 dark:border-gray-700;
+  }
+
+  .title {
+    @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight;
+  }
+
+  .title span {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .stats {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  .section {
+    @apply mb-16;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-800 dark:text-white mb-8 pb-2 relative;
+  }
+
+  .section-title:after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-16 h-1 rounded-full;
+  @apply bg-gradient-to-r from-[#6ee7b7] to-[#facc15];
+}
+
+  .club-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:border-blue-300 dark:hover:border-purple-300;
+  }
+
+  .book-card {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+
+  .cta-section {
+    @apply backdrop-blur-sm;
+  }
+} */
+
+
+
+
+
+
+.guest-hero-section {
+  @apply relative overflow-hidden py-20;
+}
+
+.guest-hero-background {
+  @apply absolute inset-0;
+}
+
+.library-texture {
+  @apply opacity-10 bg-gradient-to-br from-bookclub-orange to-bookclub-navy;
+}
+
+.guest-hero-content {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.guest-hero-text {
+  @apply text-center;
+  animation: fade-in 0.8s ease-out;
+}
+
+.guest-hero-icon {
+  @apply inline-flex items-center justify-center w-20 h-20 bg-bookclub-orange rounded-full mb-6;
+  animation: pulse 2s infinite;
+}
+
+.guest-hero-title {
+  @apply text-5xl lg:text-6xl font-bold text-bookclub-navy mb-6 leading-tight;
+}
+
+.bookclub-gradient {
+  @apply bg-gradient-to-r from-bookclub-orange to-primary-600;
+}
+
+.guest-hero-subtitle {
+  @apply text-xl text-bookclub-gray mb-8 max-w-3xl mx-auto;
+}
+
+.guest-hero-buttons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.guest-hero-primary-btn {
+  @apply text-white px-8 py-4 text-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105;
+}
+
+.guest-hero-secondary-btn {
+  @apply border-bookclub-orange text-bookclub-orange hover:bg-bookclub-orange hover:text-white px-8 py-4 text-lg transition-all duration-300;
+}
+
+.guest-stats-section {
+  @apply py-16 bg-white;
+}
+
+.guest-stats-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.guest-stats-grid {
+  @apply grid md:grid-cols-3 gap-8 text-center;
+}
+
+.guest-stat-item {
+  @apply hover:scale-105 transition-transform duration-300;
+}
+
+.guest-stat-icon {
+  @apply inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4 group-hover:bg-bookclub-cream transition-colors duration-300;
+}
+
+.guest-stat-number {
+  @apply text-3xl font-bold text-bookclub-navy mb-2;
+}
+
+.guest-stat-label {
+  @apply text-bookclub-gray;
+}
+
+.guest-clubs-section {
+  @apply py-20 bg-bookclub-cream;
+}
+
+.guest-section-header {
+  @apply text-center mb-12;
+}
+
+.guest-section-title {
+  @apply text-4xl font-bold text-bookclub-navy mb-4;
+}
+
+.guest-section-subtitle {
+  @apply text-xl text-bookclub-gray;
+}
+
+.guest-clubs-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.guest-club-card {
+  @apply hover:shadow-lg transition-all duration-300 hover:-translate-y-2;
+}
+
+.guest-club-header {
+  @apply flex items-center gap-3 mb-3;
+}
+
+.guest-club-emoji {
+  @apply text-3xl;
+}
+
+.guest-club-info {
+  @apply flex-1;
+}
+
+.guest-club-name {
+  @apply text-lg text-bookclub-navy;
+}
+
+.guest-club-members {
+  @apply flex items-center text-sm text-bookclub-gray;
+}
+
+.guest-club-description {
+  @apply text-bookclub-gray;
+}
+
+.guest-club-current-book {
+  @apply mb-4 p-3 bg-gray-50 rounded-lg;
+}
+
+.guest-club-book-title {
+  @apply text-sm font-medium text-bookclub-navy;
+}
+
+.guest-club-book-name {
+  @apply text-sm text-bookclub-gray;
+}
+
+.guest-club-join-btn {
+  @apply w-full text-white group-hover:shadow-md transition-all duration-300;
+}
+
+.guest-books-section {
+  @apply py-20 bg-white;
+}
+
+.guest-books-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.guest-book-card {
+  @apply hover:shadow-lg transition-all duration-300 hover:-translate-y-2;
+}
+
+.guest-book-image-container {
+  @apply aspect-[3/4] bg-bookclub-orange bg-opacity-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden;
+}
+
+.guest-book-image {
+  @apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-300;
+}
+
+.guest-book-title {
+  @apply text-lg text-bookclub-navy line-clamp-2;
+}
+
+.guest-book-author {
+  @apply text-bookclub-gray;
+}
+
+.guest-book-meta {
+  @apply flex items-center justify-between mb-4;
+}
+
+.guest-book-category {
+  @apply px-2 py-1 bg-bookclub-orange bg-opacity-10 text-bookclub-orange text-xs rounded;
+}
+
+.guest-book-rating {
+  @apply flex items-center;
+}
+
+.guest-book-rating-text {
+  @apply text-sm text-bookclub-gray ml-1;
+}
+
+.guest-book-details-btn {
+  @apply w-full group-hover:border-bookclub-orange group-hover:text-bookclub-orange transition-all duration-300;
+}
+
+.guest-cta-section {
+  @apply py-20 text-white relative overflow-hidden;
+}
+
+.guest-cta-decorations {
+  @apply absolute inset-0 opacity-10;
+}
+
+.guest-cta-decoration-1 {
+  @apply absolute top-10 left-10 w-32 h-32 bg-white rounded-full;
+  animation: pulse 2s infinite;
+}
+
+.guest-cta-decoration-2 {
+  @apply absolute bottom-10 right-10 w-24 h-24 bg-white rounded-full;
+  animation: pulse 2s infinite;
+  animation-delay: 1s;
+}
+
+.guest-cta-decoration-3 {
+  @apply absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full;
+  animation: pulse 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.guest-cta-content {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
+}
+
+.guest-cta-title {
+  @apply text-4xl font-bold mb-4;
+}
+
+.guest-cta-subtitle {
+  @apply text-xl mb-8 opacity-90 max-w-3xl mx-auto;
+}
+
+.guest-cta-buttons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.guest-cta-primary-btn {
+  @apply bg-white text-bookclub-orange hover:bg-gray-100 px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300;
+}
+
+.guest-cta-secondary-btn {
+  @apply border-white text-white hover:bg-white hover:text-bookclub-orange px-8 py-4 text-lg transition-all duration-300;
+}
+
+.loading-skeleton {
+  @apply animate-pulse;
+}
+
+.loading-card {
+  @apply w-full h-48 bg-gray-200 rounded-lg mb-4;
+}
+
+.loading-title {
+  @apply h-4 bg-gray-200 rounded mb-2;
+}
+
+.loading-subtitle {
+  @apply h-3 bg-gray-200 rounded w-2/3;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}

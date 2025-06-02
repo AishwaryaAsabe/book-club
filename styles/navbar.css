@@ -1,0 +1,75 @@
+
+.navbar-container {
+  @apply bg-white border-b border-gray-200;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.navbar-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.navbar-inner {
+  @apply flex justify-between items-center h-16;
+}
+
+.navbar-logo {
+  @apply flex items-center space-x-2;
+}
+
+.navbar-logo-icon {
+  @apply h-8 w-8;
+  color: #E67E22;
+}
+
+.navbar-logo-text {
+  @apply text-2xl font-bold;
+  color: #2C3E50;
+}
+
+.navbar-links {
+  @apply hidden md:flex items-center space-x-8;
+}
+
+.navbar-link {
+  @apply transition-colors duration-200;
+  color: #7F8C8D;
+}
+
+.navbar-link:hover {
+  color: #E67E22;
+}
+
+.navbar-user-section {
+  @apply flex items-center space-x-4;
+}
+
+.navbar-user-info {
+  @apply flex items-center space-x-3;
+}
+
+.navbar-user-details {
+  @apply flex items-center space-x-2;
+}
+
+.navbar-user-icon {
+  @apply h-5 w-5;
+  color: #7F8C8D;
+}
+
+.navbar-user-name {
+  @apply text-sm;
+  color: #2C3E50;
+}
+
+.navbar-auth-buttons {
+  @apply flex items-center space-x-3;
+}
+
+.navbar-mobile-menu {
+  @apply md:hidden;
+}
+
+.navbar-mobile-menu-icon {
+  @apply h-5 w-5;
+  color: #7F8C8D;
+}

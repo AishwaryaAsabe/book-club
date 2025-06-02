@@ -1,0 +1,224 @@
+/* Login Page Styles */
+/* Disable scrolling for the whole page */
+
+
+/* .login-container {
+  @apply bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 
+         min-h-screen flex items-center justify-center -mt-12 ;
+} */
+
+.login-container {
+  @apply bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 
+         h-screen flex items-center justify-center -mt-4 overflow-hidden;
+}
+
+/* .login-wrapper {
+  @apply grid lg:grid-cols-2 w-full max-w-5xl rounded-xl shadow-lg my-12;
+} */
+
+.login-wrapper {
+  @apply grid lg:grid-cols-2 w-full max-w-3xl rounded-xl shadow-lg my-6 p-4; /* Adjusted max-width and padding */
+}
+
+/* Image Section */
+.login-image-section {
+  @apply relative hidden lg:block;
+}
+
+.login-bg-image {
+  @apply w-full h-full object-cover rounded-2xl;
+}
+
+.login-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end;
+}
+
+.login-image-content {
+  @apply p-12 text-white ;
+}
+
+.login-image-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+
+
+.login-image-text {
+  @apply text-lg text-gray-200 leading-relaxed;
+}
+
+.login-subtitle {
+  @apply text-center text-gray-600 text-sm; /* Reduced font size */
+}
+
+/* Form Section */
+/* .login-form-section {
+  @apply flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8;
+} */
+
+
+.login-form-section {
+  @apply flex flex-col justify-center py-6 px-2 sm:px-4 lg:px-6; /* Reduced padding */
+}
+
+/* .login-form-container {
+  @apply max-w-md w-full mx-auto space-y-8 overflow-y-auto;
+} */
+
+.login-form-container {
+  @apply max-w-md w-full mx-auto space-y-6; /* Adjusted space */
+}
+/* Header */
+.login-header {
+  @apply flex justify-center;
+}
+
+.login-logo {
+  @apply flex items-center space-x-2 text-2xl font-bold text-gray-900 hover:text-amber-600 transition-colors duration-200;
+}
+
+.login-logo-icon {
+  @apply h-8 w-8 text-amber-600;
+}
+
+.login-logo-text {
+  @apply text-gray-900;
+}
+
+/* Form */
+.login-form-wrapper {
+  @apply space-y-6;
+}
+
+.login-title {
+  @apply text-3xl font-bold text-center text-gray-900;
+}
+
+/* .login-subtitle {
+  @apply text-center text-gray-600;
+} */
+
+.login-link {
+  @apply text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200;
+}
+
+.login-form {
+  @apply space-y-6;
+}
+
+/* Form Groups */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.input-wrapper {
+  @apply relative;
+}
+
+.input-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400;
+}
+
+/* .form-input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 bg-white text-gray-900 placeholder-gray-500;
+} */
+
+.form-input {
+  @apply w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 bg-white text-gray-900 placeholder-gray-500; /* Adjusted padding */
+}
+.password-toggle {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-200;
+}
+
+.toggle-icon {
+  @apply h-5 w-5;
+}
+
+/* Login Options */
+.login-options {
+  @apply flex items-center justify-between;
+}
+
+.checkbox-wrapper {
+  @apply flex items-center space-x-2 cursor-pointer;
+}
+
+.checkbox-input {
+  @apply h-4 w-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500;
+}
+
+.checkbox-label {
+  @apply text-sm text-gray-700;
+}
+
+.forgot-link {
+  @apply text-sm text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200;
+}
+
+/* Buttons */
+/* .login-button {
+  @apply w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 px-4 rounded-lg hover:from-amber-700 hover:to-orange-700 focus:ring-4 focus:ring-amber-200 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+} */
+ .login-button {
+  @apply w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-2 px-3 rounded-lg hover:from-amber-700 hover:to-orange-700 focus:ring-4 focus:ring-amber-200 transition-all duration-200 font-semibold shadow-lg; /* Adjusted padding */
+}
+
+
+/* Guest Section */
+.guest-section {
+  @apply space-y-4;
+}
+
+.divider {
+  @apply relative;
+}
+
+.divider::before {
+  @apply absolute inset-0 flex items-center;
+  content: '';
+}
+
+.divider::before {
+  @apply w-full border-t border-gray-300;
+}
+
+.divider-text {
+  @apply relative bg-white px-4 text-sm text-gray-500;
+}
+
+.guest-button {
+  @apply w-full border-2 border-amber-600 text-amber-600 py-3 px-4 rounded-lg hover:bg-amber-600 hover:text-white transition-all duration-200 font-semibold text-center block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .login-wrapper {
+    @apply grid-cols-1;
+  }
+  
+  .login-form-section {
+    @apply py-8;
+  }
+}
+
+/* Focus States */
+.form-input:focus {
+  @apply outline-none ring-2 ring-amber-500 border-transparent;
+}
+
+.checkbox-input:focus {
+  @apply outline-none ring-2 ring-amber-500;
+}
+
+/* Hover Effects */
+.form-input:hover {
+  @apply border-amber-300;
+}
+
+.login-button:disabled {
+  @apply opacity-50 cursor-not-allowed transform-none shadow-none;
+}
