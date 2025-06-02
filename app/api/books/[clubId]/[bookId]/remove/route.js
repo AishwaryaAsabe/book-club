@@ -1,9 +1,9 @@
 // app/api/books/[clubId]/remove/route.js
 import { NextResponse } from 'next/server';
-import { connectDB } from '@/app/lib/connectDB';
-import Club from '@/app/models/Club';
-import Book from '@/app/models/Book';
-import { authMiddleware } from '@/app/lib/authMiddleware';
+import { connectDB } from '../../../../../lib/connectDB';
+import Club from '../../../../../models/Club';
+import Book from '../../../../../models/Book';
+import { authMiddleware } from '../../../../../lib/authMiddleware';
 
 export async function POST(req, { params }) {
   await connectDB();
