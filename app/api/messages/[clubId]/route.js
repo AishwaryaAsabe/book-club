@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectDB } from '../../../lib/connectDB';
-import Messege from '../../../models/Messege';
+import Messege from '../../../models/Message';
 
 export async function GET(req, { params }) {
   const { clubId } = params;

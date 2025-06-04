@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MessegeSchema = new mongoose.Schema({
+const MessageSchema = new mongoose.Schema({
   clubId: { type: mongoose.Schema.Types.ObjectId, ref: 'Club', required: true },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   text: { type: String, required: true },
@@ -9,4 +9,4 @@ const MessegeSchema = new mongoose.Schema({
   replyTo: { type: mongoose.Schema.Types.ObjectId, ref: 'Messege', default: null },
 }, { timestamps: true }); // Automatically manage createdAt and updatedAt
 
-export default mongoose.models.Messege || mongoose.model('Messege', MessegeSchema);
+export default mongoose.models.Message || mongoose.model('Message', MessageSchema);

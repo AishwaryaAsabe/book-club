@@ -1,10 +1,10 @@
 import { connectDB } from '../../../lib/connectDB';
 import Discussion from '../../../models/Discussion';
-import Messege from '../../../models/Messege';
+import Message from '../../../models/Message';
 
 export async function GET(req, { params }) {
   await connectDB();
-  const { clubId } = params;
+  const { clubId } = await params; // ✅ This is REQUIRED in app directory
 
   if (!clubId.match(/^[0-9a-fA-F]{24}$/)) {
     return new Response(JSON.stringify({ error: 'Invalid clubId' }), { status: 400 });
@@ -44,7 +44,7 @@ export async function POST(req, { params }) {
     }
 
     // 1. Create the message
-    const newMsg = await Messege.create({
+    const newMsg = await Message.create({
       clubId,
       userId,
       text,
